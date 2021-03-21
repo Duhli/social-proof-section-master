@@ -1,0 +1,303 @@
+@import url('https://fonts.google.com/specimen/Spartan');
+
+/*###### Prebuilt #######*/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;  
+    position: absolute;
+    top: 95vh;
+    left: 40vw;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+/*###### Default #######*/
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    font-size: 15px;
+    font-family: 'Spartan', sans-serif;
+}
+
+
+/*###### Desktop #######*/
+
+.container {
+    background: hsl(0, 0%, 100%);
+    height: 100vh;
+    width: 100vw;
+    background: 
+    url(images/bg-pattern-top-desktop.svg),
+    url(images/bg-pattern-bottom-desktop.svg);
+    background-position: 
+    top left,
+    bottom right;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    grid-template-rows: repeat(12,1fr);
+}
+
+.company, .ratings, .reviews {
+    overflow: hidden;
+}
+
+.company {
+    grid-column: 2 / 6;
+    grid-row: 2 / 7;
+}
+
+.products {
+    font-size: 3.3778rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+    padding-top: 2rem;
+    line-height: .9;
+    color: hsl(300, 43%, 22%);
+}
+
+.promise {
+    font-weight: 400;
+    color: hsl(303, 10%, 53%);
+    line-height: 1.5;
+}
+
+.ratings {
+    grid-column: 7 / 12;
+    grid-row: 2 / 7;
+}
+
+.rating {
+    background: hsl(300, 24%, 96%);
+    border-radius: 5px;
+    width: 30.2222rem;
+    margin: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.rating:nth-child(1) {
+    margin-top: 3rem;
+}
+
+.rating:nth-child(2) {
+    margin-left: 2.5rem;
+}
+
+.rating:nth-child(3) {
+    margin-left: 5rem;
+}
+
+.rating-src {
+    padding-left: 2rem;
+    font-weight: 700;
+    color: hsl(300, 43%, 22%);
+}
+
+.star {
+    padding: .2rem;
+}
+
+.star:nth-child(1) {
+    margin-left: 3rem;
+}
+
+.reviews {
+    grid-column: 2 / 12;
+    grid-row: 7 / 12;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.card {
+    background: hsl(300, 43%, 22%);
+    border-radius: 5px;
+    height: 11.7333rem;
+}
+
+.card:nth-child(1) {
+    margin-top: -2rem;
+}
+
+.card:nth-child(2) {
+    margin: auto 2rem;
+}
+
+.card:nth-child(3) {
+    margin-top: 2rem;
+}
+
+.profile {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-auto-rows: minmax(2rem,auto);
+}
+
+.pfp {
+    grid-column: 1 / 3;
+    grid-row: 1 / 3;
+    width: 2.1333rem;
+    height: 2.1333rem;
+    border-radius: 50%;
+    margin-top: 1.8667rem;
+    margin-left: 1.6rem;
+}
+
+.name {
+    grid-column: 3 / 5;
+    grid-row: 1 / 2;
+    margin-bottom: 0;
+    font-weight: 700;
+    color: hsl(300, 24%, 96%);
+    margin-top: 1.8667rem;
+    margin-left: -5.5rem;
+}
+
+.verification {
+    grid-column: 3 / 5;
+    grid-row: 2 / 3;
+    margin-top: 0;
+    color: hsl(333, 80%, 67%);
+    margin-bottom: 0;
+    margin-left: -5.5rem;
+}
+
+.review-text {
+    color: hsl(300, 24%, 96%);
+    margin: 0 1.7333rem;
+    margin-left: 1.6rem;
+    margin-top: .5rem;
+    font-weight: 500;
+}
+
+
+/*###### Mobile #######*/
+
+@media screen and (max-width: 375px) {
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    background-size: 100%;
+}
+
+.company {
+    width: 80vw;
+    height: auto;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+.products {
+    font-size: 2rem;
+    margin: 0;    
+    margin-top: 5rem;
+    padding: 0;
+}
+
+.promise {
+    margin: 0;
+    margin-top: 1rem;
+    padding: 0;
+
+}
+
+.ratings {
+    width: 90vw;
+    height: auto;
+    margin: 0;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.rating {
+    margin: 0;
+    padding: 0;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rating:nth-child(1), .rating:nth-child(2), .rating:nth-child(3) {
+    margin: 0;
+}
+
+.rating:nth-child(2) {
+    margin: 1rem 0;
+}
+
+.rating-src {
+    padding-left: 0;
+}
+
+.total-stars {
+    padding-top: 1rem;
+}
+
+.star {
+    padding: 0 .2rem;
+}
+
+.star:nth-child(1) {
+    margin-left: 0;
+}
+
+.reviews {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: auto;
+    margin-top: 2rem;
+    margin-bottom: 10vh;
+}
+
+.card {
+    background: hsl(300, 43%, 22%);
+    border-radius: 5px;
+    height: 12rem;
+    width: 90vw;
+    padding: 1rem 0;
+}
+
+.card:nth-child(1), .card:nth-child(2), .card:nth-child(3) {
+    margin: 0;
+}
+
+.card:nth-child(2) {
+    margin: 1rem 0;
+}
+
+.review-text {
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/*###### Prebuilt #######*/
+
+.attribution {
+    font-size: 11px;
+    text-align: center;  
+    position: absolute;
+    top: 201%;
+    left: 18%;
+}
+
+
+}
